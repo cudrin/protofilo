@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cudrin</title>
+    <title>cv</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -27,13 +27,12 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>cudrin <span class="dot" id="status-dot">•</span></h1>
+            <h1>cv <span class="dot" id="status-dot">•</span></h1>
             <p id="subtext" class="subtext">Offline...</p>
         </div>
         
         <div class="content" style="margin-top: 30px; line-height: 1.6;">
             <p style="font-size: 1.1rem; font-weight: 400; margin: 0;">Hey, I am a 13 y/o backend developer</p>
-            <p style="font-size: 1rem; color: #555;">The time in my country is <span id="russia-time" style="font-weight: 600;">--:--</span>.</p>
         </div>
         <div class="icons">
             <a href="https://github.com/cudrin"><i class="fab fa-github"></i></a>
@@ -118,17 +117,7 @@
             }
         }
 
-        function updateRussiaTime() {
-            const now = new Date();
-            const options = { timeZone: "UTC", hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-            const russiaTime = new Date(now.getTime() + 3 * 60 * 60 * 1000).toLocaleTimeString('en-GB', options);
-            russiaTimeElement.textContent = russiaTime;
-        }
 
-        fetchPresence();
-        setInterval(fetchPresence, 1000);
-        updateRussiaTime();
-        setInterval(updateRussiaTime, 1000);
     </script>
 </body>
 </html>
